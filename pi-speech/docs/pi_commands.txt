@@ -1,0 +1,37 @@
+play
+play music
+start
+start music
+continue
+resume
+stop
+stop now
+halt
+pause
+abort
+cancel
+help
+help me
+turn off
+shut down
+kill
+weather
+weather today
+weather tomorrow
+how is
+the weather
+the weather today
+the weather tomorrow
+weather forecast
+weather forecast today
+weather forecast tomorrow
+tell me
+weather forecast for today
+weather forecast for tomorrow
+wiki
+what is
+who is
+where is
+time
+what time
+what time is it
