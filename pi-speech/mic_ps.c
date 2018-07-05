@@ -22,13 +22,14 @@ int main(int argc, char *argv[])
 {
     config = cmd_ln_init(NULL, ps_args(), TRUE,                         // Load the configuration structure - ps_args() passes the default values
         "-hmm", "/usr/local/share/pocketsphinx/model/en-us/en-us",      // path to the standard english language model
-        "-lm", "models/pi_commands.lm",                                 // custom language model (file must be present)
-        "-dict", "models/pi_commands.dic",                              // custom dictionary (file must be present)
+        "-lm", "models/old_pi_commands.lm",                                 // custom language model (file must be present)
+        "-dict", "models/old_pi_commands.dic",                              // custom dictionary (file must be present)
         "-logfn", "/dev/null",                                          // suppress log info from being sent to screen
         NULL);
 
     ps = ps_init(config);                                                        // initialize the pocketsphinx decoder
-    ad = ad_open_dev("plughw:1,0", (int) cmd_ln_float32_r(config, "-samprate")); // open default microphone at default samplerate
+    // ad = ad_open_dev("plughw:1,0", (int) cmd_ln_float32_r(config, "-samprate")); // open default microphone at default samplerate
+    ad = ad_open_dev("plughw:1,0", 16000);
 
     while(1) {
         decoded_speech = recognize_from_microphone();                    // call the function to capture and decode speech

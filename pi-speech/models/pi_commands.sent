@@ -14,24 +14,9 @@
 <s> HELP ME </s>
 <s> TURN OFF </s>
 <s> SHUT DOWN </s>
-<s> KILL </s>
 <s> WEATHER </s>
-<s> WEATHER TODAY </s>
-<s> WEATHER TOMORROW </s>
-<s> HOW IS </s>
-<s> THE WEATHER </s>
-<s> THE WEATHER TODAY </s>
-<s> THE WEATHER TOMORROW </s>
 <s> WEATHER FORECAST </s>
-<s> WEATHER FORECAST TODAY </s>
-<s> WEATHER FORECAST TOMORROW </s>
-<s> TELL ME </s>
-<s> WEATHER FORECAST FOR TODAY </s>
-<s> WEATHER FORECAST FOR TOMORROW </s>
+<s> TODAY </s>
+<s> TOMORROW </s>
 <s> WIKI </s>
-<s> WHAT IS </s>
-<s> WHO IS </s>
-<s> WHERE IS </s>
 <s> TIME </s>
-<s> WHAT TIME </s>
-<s> WHAT TIME IS IT </s>
