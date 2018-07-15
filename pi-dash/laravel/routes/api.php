@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +25,17 @@ Route::group(['middleware' => 'cors'], function() {
         return response([1,2,3,4], 200);
     });
 
-//    Route::group([
-//        'prefix' => 'auth'
-//    ], function () {
-//        Route::post('login', 'AuthController@login');
-//        Route::post('signup', 'AuthController@signup');
-//
-//        Route::group([
-//            'middleware' => 'auth:api'
-//        ], function() {
-//            Route::get('logout', 'AuthController@logout');
-//            Route::get('user', 'AuthController@user');
-//        });
-//    });
+    Route::group([
+        'prefix' => 'auth'
+    ], function () {
+        Route::post('login', 'AuthController@login');
+        Route::post('signup', 'AuthController@signup');
+
+        Route::group([
+            'middleware' => 'auth:api'
+        ], function() {
+            Route::get('logout', 'AuthController@logout');
+            Route::get('user', 'AuthController@user');
+        });
+    });
 });
