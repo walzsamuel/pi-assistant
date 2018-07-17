@@ -6,16 +6,18 @@
 
                 <form @submit.prevent="login(user)">
                     <div class="text-left">
-                        <div class="form-group">
+                        <div class="form-group" :class="{ 'has-error': errors.email.length }">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email"
-                                   placeholder="Your email" v-model="user.email">
+                            <input type="email" class="form-control" id="email" placeholder="Your email"
+                                   v-model="user.email">
+                            <p class="help-block small text-danger" v-for="error in errors.email" v-bind:key="error">{{ error }}</p>
                         </div>
 
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password"
-                                   placeholder="Your password" v-model="user.password">
+                        <div class="form-group" :class="{ 'has-error': errors.password.length }">
+                        <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Your password"
+                                   v-model="user.password">
+                            <p class="help-block small text-danger" v-for="error in errors.password" v-bind:key="error">{{ error }}</p>
                         </div>
                     </div>
 
@@ -54,6 +56,10 @@ export default {
                 email: null,
                 password: null,
             },
+            errors: {
+                email: [],
+                password: [],
+            },
         };
     },
     methods: {
@@ -75,9 +81,23 @@ export default {
                     // eslint-disable-next-line
                     console.log(response);
                 })
-                .catch(function (e) {
-                    console.log(e);
+                /* eslint-disable */
+                .catch(function(error){
+                    let data = error.data.errors;
+
+                    for(let key in this.errors) {
+                        if (this.errors.hasOwnProperty(key)) {
+                            this.errors[key] = [];
+
+                            let errorMessage = data[key];
+
+                            if(errorMessage) {
+                                this.errors[key] = errorMessage;
+                            }
+                        }
+                    }
                 });
+            /* eslint-enable */
         },
     },
 };
