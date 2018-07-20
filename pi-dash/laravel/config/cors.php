@@ -13,7 +13,12 @@ return [
     */
 
     'supportsCredentials' => false,
-    'allowedOrigins' => ['http://localhost:8080','http://192.168.0.199:8080'],
+    'allowedOrigins' => [
+        'http://localhost:8080',
+        'http://192.168.0.199:8080',
+        'http://192.168.0.17:8080',
+        'http://192.168.0.104:8080',
+    ],
     'allowedOriginsPatterns' => [],
     'allowedHeaders' => ['*'],
     'allowedMethods' => ['*'],

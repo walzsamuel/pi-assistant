@@ -20,22 +20,20 @@ use App\Http\Controllers\AuthController;
 //    return $request->user();
 //})->middleware('cors');
 
-Route::group(['middleware' => 'cors'], function() {
-    Route::get('test', function () {
-        return response([1,2,3,4], 200);
-    });
+Route::get('test', function () {
+    return response([1,2,3,4], 200);
+});
+
+Route::group([
+    'prefix' => 'auth'
+], function () {
+    Route::post('login', 'AuthController@login')->middleware('cors');
+    Route::post('signup', 'AuthController@signup')->middleware('cors');
 
     Route::group([
-        'prefix' => 'auth'
-    ], function () {
-        Route::post('login', 'AuthController@login')->middleware('cors');
-        Route::post('signup', 'AuthController@signup')->middleware('cors');
-
-        Route::group([
-            'middleware' => 'auth:api'
-        ], function() {
-            Route::get('logout', 'AuthController@logout')->middleware('cors');
-            Route::get('user', 'AuthController@user')->middleware('cors');
-        });
+        'middleware' => 'auth:api'
+    ], function() {
+        Route::get('logout', 'AuthController@logout')->middleware('cors');
+        Route::get('user', 'AuthController@user')->middleware('cors');
     });
 });

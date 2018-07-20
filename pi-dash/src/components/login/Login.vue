@@ -75,7 +75,7 @@ export default {
             };
         },
         login(user) {
-            this.$http.post( domain + '/api/auth/login', user)
+            this.$http.post(domain + '/api/auth/login', user)
                 .then(response => {
                     this.resetUser();
                     // eslint-disable-next-line
