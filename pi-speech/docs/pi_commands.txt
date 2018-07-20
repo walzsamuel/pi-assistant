@@ -1,18 +1,4 @@
-play
 play music
-start
-start music
-continue
-resume
-stop
-stop now
-halt
-pause
-abort
-cancel
-help
-help me
-turn off
 shut down
 weather
 weather forecast
@@ -20,3 +6,5 @@ today
 tomorrow
 wiki
 time
+change voice
+need help

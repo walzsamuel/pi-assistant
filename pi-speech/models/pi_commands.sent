@@ -1,18 +1,4 @@
-<s> PLAY </s>
 <s> PLAY MUSIC </s>
-<s> START </s>
-<s> START MUSIC </s>
-<s> CONTINUE </s>
-<s> RESUME </s>
-<s> STOP </s>
-<s> STOP NOW </s>
-<s> HALT </s>
-<s> PAUSE </s>
-<s> ABORT </s>
-<s> CANCEL </s>
-<s> HELP </s>
-<s> HELP ME </s>
-<s> TURN OFF </s>
 <s> SHUT DOWN </s>
 <s> WEATHER </s>
 <s> WEATHER FORECAST </s>
@@ -20,3 +6,5 @@
 <s> TOMORROW </s>
 <s> WIKI </s>
 <s> TIME </s>
+<s> CHANGE VOICE </s>
+<s> NEED HELP </s>

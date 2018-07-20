@@ -1,4 +1,4 @@
-Language model created by QuickLM on Wed Jul  4 15:22:56 EDT 2018
+Language model created by QuickLM on Wed Jul 18 17:49:07 EDT 2018
 Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
 
 The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
@@ -7,116 +7,72 @@ The code that was used to produce this language model is available in Open Sourc
 Please visit http://www.speech.cs.cmu.edu/tools/ for more information
 
 The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
-This model based on a corpus of 22 sentences and 25 words
+This model based on a corpus of 10 sentences and 16 words
 
 \data\
-ngram 1=25
-ngram 2=45
-ngram 3=29
+ngram 1=16
+ngram 2=24
+ngram 3=15
 
 \1-grams:
--0.8219 </s> -0.3010
--0.8219 <s> -0.2301
--2.1644 ABORT -0.2301
--2.1644 CANCEL -0.2301
--2.1644 CONTINUE -0.2301
--2.1644 DOWN -0.2301
--2.1644 FORECAST -0.2301
--2.1644 HALT -0.2301
--1.8633 HELP -0.2266
--2.1644 ME -0.2301
--1.8633 MUSIC -0.2301
--2.1644 NOW -0.2301
--2.1644 OFF -0.2301
--2.1644 PAUSE -0.2301
--1.8633 PLAY -0.2230
--2.1644 RESUME -0.2301
--2.1644 SHUT -0.2980
--1.8633 START -0.2230
--1.8633 STOP -0.2266
--2.1644 TIME -0.2301
--2.1644 TODAY -0.2301
--2.1644 TOMORROW -0.2301
--2.1644 TURN -0.2980
--1.8633 WEATHER -0.2266
--2.1644 WIKI -0.2301
+-0.8451 </s> -0.3010
+-0.8451 <s> -0.2341
+-1.8451 CHANGE -0.2948
+-1.8451 DOWN -0.2341
+-1.8451 FORECAST -0.2341
+-1.8451 HELP -0.2341
+-1.8451 MUSIC -0.2341
+-1.8451 NEED -0.2948
+-1.8451 PLAY -0.2948
+-1.8451 SHUT -0.2948
+-1.8451 TIME -0.2341
+-1.8451 TODAY -0.2341
+-1.8451 TOMORROW -0.2341
+-1.8451 VOICE -0.2341
+-1.5441 WEATHER -0.2268
+-1.8451 WIKI -0.2341
 
 \2-grams:
--1.6435 <s> ABORT 0.0000
--1.6435 <s> CANCEL 0.0000
--1.6435 <s> CONTINUE 0.0000
--1.6435 <s> HALT 0.0000
--1.3424 <s> HELP 0.0000
--1.6435 <s> PAUSE 0.0000
--1.3424 <s> PLAY 0.0000
--1.6435 <s> RESUME 0.0000
--1.6435 <s> SHUT 0.0000
--1.3424 <s> START 0.0000
--1.3424 <s> STOP 0.0000
--1.6435 <s> TIME 0.0000
--1.6435 <s> TODAY 0.0000
--1.6435 <s> TOMORROW 0.0000
--1.6435 <s> TURN 0.0000
--1.3424 <s> WEATHER 0.0000
--1.6435 <s> WIKI 0.0000
--0.3010 ABORT </s> -0.3010
--0.3010 CANCEL </s> -0.3010
--0.3010 CONTINUE </s> -0.3010
+-1.3010 <s> CHANGE 0.0000
+-1.3010 <s> NEED 0.0000
+-1.3010 <s> PLAY 0.0000
+-1.3010 <s> SHUT 0.0000
+-1.3010 <s> TIME 0.0000
+-1.3010 <s> TODAY 0.0000
+-1.3010 <s> TOMORROW 0.0000
+-1.0000 <s> WEATHER 0.0000
+-1.3010 <s> WIKI 0.0000
+-0.3010 CHANGE VOICE 0.0000
 -0.3010 DOWN </s> -0.3010
 -0.3010 FORECAST </s> -0.3010
--0.3010 HALT </s> -0.3010
--0.6021 HELP </s> -0.3010
--0.6021 HELP ME 0.0000
--0.3010 ME </s> -0.3010
+-0.3010 HELP </s> -0.3010
 -0.3010 MUSIC </s> -0.3010
--0.3010 NOW </s> -0.3010
--0.3010 OFF </s> -0.3010
--0.3010 PAUSE </s> -0.3010
--0.6021 PLAY </s> -0.3010
--0.6021 PLAY MUSIC 0.0000
--0.3010 RESUME </s> -0.3010
+-0.3010 NEED HELP 0.0000
+-0.3010 PLAY MUSIC 0.0000
 -0.3010 SHUT DOWN 0.0000
--0.6021 START </s> -0.3010
--0.6021 START MUSIC 0.0000
--0.6021 STOP </s> -0.3010
--0.6021 STOP NOW 0.0000
 -0.3010 TIME </s> -0.3010
 -0.3010 TODAY </s> -0.3010
 -0.3010 TOMORROW </s> -0.3010
--0.3010 TURN OFF 0.0000
+-0.3010 VOICE </s> -0.3010
 -0.6021 WEATHER </s> -0.3010
 -0.6021 WEATHER FORECAST 0.0000
 -0.3010 WIKI </s> -0.3010
 
 \3-grams:
--0.3010 <s> ABORT </s>
--0.3010 <s> CANCEL </s>
--0.3010 <s> CONTINUE </s>
--0.3010 <s> HALT </s>
--0.6021 <s> HELP </s>
--0.6021 <s> HELP ME
--0.3010 <s> PAUSE </s>
--0.6021 <s> PLAY </s>
--0.6021 <s> PLAY MUSIC
--0.3010 <s> RESUME </s>
+-0.3010 <s> CHANGE VOICE
+-0.3010 <s> NEED HELP
+-0.3010 <s> PLAY MUSIC
 -0.3010 <s> SHUT DOWN
--0.6021 <s> START </s>
--0.6021 <s> START MUSIC
--0.6021 <s> STOP </s>
--0.6021 <s> STOP NOW
 -0.3010 <s> TIME </s>
 -0.3010 <s> TODAY </s>
 -0.3010 <s> TOMORROW </s>
--0.3010 <s> TURN OFF
 -0.6021 <s> WEATHER </s>
 -0.6021 <s> WEATHER FORECAST
 -0.3010 <s> WIKI </s>
--0.3010 HELP ME </s>
+-0.3010 CHANGE VOICE </s>
+-0.3010 NEED HELP </s>
 -0.3010 PLAY MUSIC </s>
 -0.3010 SHUT DOWN </s>
--0.3010 START MUSIC </s>
--0.3010 STOP NOW </s>
--0.3010 TURN OFF </s>
 -0.3010 WEATHER FORECAST </s>
 
 \end\
