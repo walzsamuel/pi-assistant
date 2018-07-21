@@ -52,15 +52,8 @@
 </template>
 
 <script>
-import {domain} from '@/config'
 
 export default {
-    // created () {
-    //     this.checkCurrentLogin()
-    // },
-    // updated () {
-    //     this.checkCurrentLogin()
-    // },
     data() {
         return {
             user: {
@@ -76,28 +69,24 @@ export default {
         };
     },
     methods: {
-    // checkCurrentLogin() {
-    //     if (localStorage.token) {
-    //         this.$router.replace(this.$route.query.redirect || '/')
-    //     }
-    // },
-    resetUser() {
-        this.user = {
-            name: null,
-            email: null,
-            password: null,
-            password_confirmation: null,
-        };
-    },
-    register(user) {
-        this.$http.post( domain + '/api/auth/signup', user)
-            .then((response) => {
-                this.resetUser();
-                // eslint-disable-next-line
-                console.log(response);
-            })
+        resetUser() {
+            this.user = {
+                name: null,
+                email: null,
+                password: null,
+                password_confirmation: null,
+            };
+        },
+        register(user) {
+        // eslint-disable-next-line
+        this.$http.post(this.$cfg.API_LOCATION + 'api/auth/signup', user)
+                .then(response => {
+                    this.resetUser();
+                    // eslint-disable-next-line
+                    console.log(response);
+                })
             /* eslint-disable */
-            .catch(function(error){
+            .catch(error => {
                 let data = error.data.errors;
 
                 for(let key in this.errors) {

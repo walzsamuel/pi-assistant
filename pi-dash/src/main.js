@@ -2,16 +2,16 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 
+import './styles';
 import App from './App.vue';
 import router from './router';
+import cfg from './config';
 
-// Import the styles directly. (Or you could add them via script tags.)
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
 Vue.use(BootstrapVue);
+Object.defineProperty(Vue.prototype, '$cfg', { value: cfg });
 
 new Vue({
     router,
