@@ -4,7 +4,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h1>Login Form</h1>
 
-                <form @submit.prevent="login(user)">
+                <form @submit.prevent="apiLogin(user)">
                     <div class="text-left">
                         <div class="form-group" :class="{ 'has-error': errors.email.length }">
                             <label for="email">Email</label>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 
 export default {
     data() {
@@ -56,21 +57,21 @@ export default {
         };
     },
     methods: {
+        ...mapActions(['login']),
         resetUser() {
             this.user = {
                 name: null,
                 email: null,
             };
         },
-        login(user) {
+        apiLogin(user) {
             // eslint-disable-next-line
             this.$http.post(this.$cfg.API_LOCATION + 'api/auth/login', user)
                 .then(response => {
                     this.resetUser();
-                    // eslint-disable-next-line
-                    console.log(response);
+                    /* eslint-disable */
+                    this.login(response.body.access_token);
                 })
-                /* eslint-disable */
                 .catch(error => {
                     let data = error.data.errors;
 
